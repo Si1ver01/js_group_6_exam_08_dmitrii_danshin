@@ -4,21 +4,25 @@ import QuotesList from '../../components/QuotesList/QuotesList'
 import Category from '../../components/Category/Category'
 import { QuotesContext } from '../../context/quotesContext'
 
-const MainPage = () => {
-  const {quotesList,getQuoteList} = useContext(QuotesContext);
+const MainPage = (props) => {
+  const {quotesList,getQuoteList ,getQuoteListCategory} = useContext(QuotesContext);
 
   useEffect(()=> {
     console.log('use effect in mainPage')
-    getQuoteList();
-  },[])
+    if (Object.keys(props.match.params).length){
+      getQuoteListCategory(props)
+    }else {
+      getQuoteList();
+    }
+    // eslint-disable-next-line
+  },[props.match.params.name])
 
- console.log(quotesList)
   return (
     
     <div className='MainPage'>
       <div className='container'>
         <Category/>
-        <QuotesList list={quotesList}/>
+        {quotesList && <QuotesList list={quotesList}/>}
       </div>
     </div>
   )

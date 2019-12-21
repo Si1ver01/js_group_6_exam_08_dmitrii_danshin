@@ -14,7 +14,9 @@ function App() {
           <Switch>
             <Route path="/" exact component={MainPage} />
             <Route path="/newPost" component={CreateQuote} />
-            <Route path="/edit/:id" component={CreateQuote} />
+            <Route path="/edit/:id" render={(props) => <CreateQuote edit={true} {...props}/>} />
+            <Route path="/category/:name" component={MainPage} />
+            <Redirect to="/"/>
           </Switch>
         </Layout>
       </BrowserRouter>

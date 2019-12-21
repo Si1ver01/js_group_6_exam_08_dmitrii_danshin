@@ -2,6 +2,7 @@
   border: 1px solid gray;
   display: flex;
   flex-direction: column;
+  margin-bottom: 5px;
 }
 
 blockquote {
@@ -26,8 +27,17 @@ blockquote {
     padding: 5px;
     button{
       background: transparent;
+      text-transform: uppercase;
+      border: 0;
+      font-size: 14px;
+      color: gray;
+      cursor: pointer;
     }
     a{
+      color: gray;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 14px;
 
     }
   }

@@ -1,7 +1,7 @@
 .Quotes-list{
-  border: 1px solid #ffffff;
   flex-grow: 1;
   text-align: center;
+  overflow-y: scroll;
   ul{
     list-style: none;
     padding: 0 10px;
