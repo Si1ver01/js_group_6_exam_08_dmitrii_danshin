@@ -1,0 +1,53 @@
+.Select{
+  display: flex;
+}
+
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+
+}
+
+.custom-dropdown select {
+  font-size: 14px;
+
+  cursor:pointer;
+  background-color: #ffffff;
+  color: gray;
+  padding: 10px 20px;
+  border: 0;
+  margin: 0;
+  border-radius: 5px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+  width: 100%;
+  outline: none;
+
+}
+
+.custom-dropdown::before,
+.custom-dropdown::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.4);
+}

@@ -1,0 +1,11 @@
+.MainPage{
+  background: linear-gradient(to right, #cc2b5e, #753a88); 
+  flex-grow: 1;
+  .container{
+    display: flex;
+    height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
